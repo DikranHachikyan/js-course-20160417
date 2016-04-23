@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Page 06</title>
+    <script type="text/javascript">
+        //1. декларация на функция
+        var msg;
+
+        function showMessage(txt, n)
+        {
+            if( txt === '' || txt === undefined || txt === null )
+            {
+                //window.alert('Не е зададен текст на съобщението');
+                console.log('Не е зададен текст на съобщението:', txt);
+                txt = 'Съобщение';
+            }
+
+            if( n < 1 || n > 6 )
+            {
+                console.log('Стойността на n не е допустима:', n);
+                n = 4;
+            }
+            
+            document.write('<h'+n+'>'+txt+'</h'+n+'>');
+        }
+    
+        //2. извикваме функцията
+        showMessage('Успешен вход в приложението', 3);
+        showMessage(msg,2);
+        showMessage('Проверете въведените данни!',14);
+        showMessage('Успешена регистрация. Провере вашата поща за ...',3);
+
+    </script>
+</head>
+<body>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat vero iste error sapiente blanditiis illum laborum veritatis doloribus dolores harum necessitatibus, commodi dolore reiciendis quisquam porro voluptate recusandae dicta veniam.</p>
+    <noscript>
+        Моля,  разрешете използването на JS ...
+    </noscript>
+</body>
+</html>

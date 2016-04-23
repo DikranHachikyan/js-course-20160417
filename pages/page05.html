@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Page 05</title>
+    <script type="text/javascript">
+
+    //1. декларация на променлива
+    var visitorName = '';
+
+    //2. използваме я
+    visitorName = window.prompt('Как се казвате?');
+
+    //3. проверяваме какво е направил посетителя
+    if( visitorName === null || visitorName === '') //бутон Cancel или Ок без текст
+    {
+        visitorName = 'посетител';
+    }
+    else //въвел е име + Ок
+    {
+        visitorName = '<span style="color:red">' + visitorName + '</span>';
+    }
+
+
+    document.write( '<h1>Здравей ' + visitorName + '!</h1>' );
+    
+    </script>
+</head>
+<body>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat vero iste error sapiente blanditiis illum laborum veritatis doloribus dolores harum necessitatibus, commodi dolore reiciendis quisquam porro voluptate recusandae dicta veniam.</p>
+    <noscript>
+        Моля,  разрешете използването на JS ...
+    </noscript>
+</body>
+</html>
