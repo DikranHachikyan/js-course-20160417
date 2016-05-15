@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Page 06</title>
+
 </head>
 <body>
 
@@ -13,17 +14,11 @@
     <noscript>
         Моля,  разрешете използването на JS ...
     </noscript>
-
-    <!-- Ако е зададено св. src, НЕ можете да пишете между етикетите script -->
     <script src="../js/jquery-2.2.3.min.js"></script>
-
-    <!-- Тук пишен локалния JS -->
-    <script type="text/javascript">
-       $(document).ready( function(){
-
+    <script>
+        $(document).ready(function(){
             $('body').prepend('<h1>Hello jQuery!</h1>');
-            
-       });
+        });
     </script>
 </body>
 </html>

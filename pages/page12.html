@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Page 06</title>
+    <style>
+        ul{
+            list-style: none;
+        }
+
+        li a{
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li><a href="movie.mp4">jQuery Selectors- video tutorial</a></li>
+        <li><a href="book.mp3">Audio Book</a></li>
+        <li><a href="manual.pdf">Mastering jQuery</a></li>
+        <li><a href="cv.doc">My CV</a></li>
+    </ul>
+  
+    <noscript>
+        Моля,  разрешете използването на JS ...
+    </noscript>
+
+    <!-- Ако е зададено св. src, НЕ можете да пишете между етикетите script -->
+    <script src="../js/jquery-2.2.3.min.js"></script>
+
+    <!-- Тук пишен локалния JS -->
+    <script type="text/javascript">
+       $(document).ready( function(){
+            $('li a[href$="mp4"]').before('<img src="../images/video-x-generic.png"  />');
+            $('li a[href$="mp3"]').before('<img src="../images/audio-x-generic.png"  />');
+            $('li a[href$="doc"]').before('<img src="../images/x-office-document.png"  />');
+            $('li a[href$="pdf"]').before('<img src="../images/package-x-generic.png"  />');
+            $('li img').css('margin-right', '10px');   
+       });
+    </script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Page 06</title>
+</head>
+<body>
+
+    
+    <p class="txt">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat vero iste error sapiente blanditiis illum laborum veritatis doloribus dolores harum necessitatibus, commodi dolore reiciendis quisquam porro voluptate recusandae dicta veniam.
+    </p>
+    <p>Natus a ea asperiores aliquid, iure ducimus odio, porro cupiditate cum autem reiciendis incidunt, illo inventore assumenda animi accusamus tempore rem iste.
+    </p>
+    <div class="txt">Possimus adipisci doloremque laboriosam mollitia delectus eum, molestias neque rem sit dolor provident minima officia! Nostrum laborum totam, delectus nemo exercitationem beatae amet reiciendis, vitae quo minus placeat fuga recusandae.
+    </div>
+    <p class="txt">Ex sint maxime consequatur dolor fugit inventore, incidunt consectetur nulla minima quaerat natus, quisquam exercitationem, nemo neque. Cupiditate maxime cum quidem quis corrupti, laborum nemo molestias, saepe eos minus natus.
+    </p>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis esse illum, eveniet adipisci nihil commodi magni, blanditiis neque ea eligendi illo accusamus temporibus qui earum iusto aliquam doloribus perspiciatis minus.
+    </p>
+    <p>Voluptas doloremque, dignissimos veniam earum ab ea minus modi nam laborum sed officia aperiam explicabo deserunt a! Consectetur dolores commodi, deserunt qui, minus dolorem eos reprehenderit nostrum cum, quibusdam nemo.
+    </p>
+    <p>Sequi sed voluptas debitis animi, repellat necessitatibus ratione veniam magnam iure vel exercitationem iste aut quibusdam sunt similique neque eos ab rem quia voluptate ipsum. Iusto est vel, cupiditate nemo!
+    </p>
+
+    <noscript>
+        Моля,  разрешете използването на JS ...
+    </noscript>
+
+    <!-- Ако е зададено св. src, НЕ можете да пишете между етикетите script -->
+    <script src="../js/jquery-2.2.3.min.js"></script>
+
+    <!-- Тук пишен локалния JS -->
+    <script type="text/javascript">
+       $(document).ready( function(){
+
+            $('p').css('background-color','yellow');
+
+            $('p.txt').css('border','1px solid red');
+
+            $('div + p').css('border','2px solid blue');
+
+            $('div ~ p').css('background-color','#ccc');
+            
+       });
+    </script>
+</body>
+</html>
