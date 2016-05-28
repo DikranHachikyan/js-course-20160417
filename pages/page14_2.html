@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Page 06</title>
+    <script type="text/javascript">
+       
+    </script>
+</head>
+<body>
+
+    <img src="../pics-large/pic1.jpg" alt="" id="pic" data-over="../pics-large/pic5.jpg" >
+    <noscript>
+        Моля,  разрешете използването на JS ...
+    </noscript>
+    <script src="../js/jquery-2.2.3.min.js"></script>
+
+    <!-- Тук пишен локалния JS -->
+    <script type="text/javascript">
+       $(document).ready( function(){
+           console.log('Hello jQuery');
+           var imgSrc='';
+
+           $('#pic')
+           .mouseover(function(evt){
+                var imgOver = $(this).data('over');
+                    imgSrc  = $(this).attr('src');
+
+                $(this).attr('src', imgOver );
+           })//on mouse over
+           .mouseout(function(evt){
+                $(this).attr('src', imgSrc );
+           }); //on mouse out
+
+       });//document ready
+    </script>
+</body>
+</html>
