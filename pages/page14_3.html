@@ -9,7 +9,9 @@
 </head>
 <body>
 
-    <img src="../pics-large/pic1.jpg" alt="" id="pic" data-over="../pics-large/pic5.jpg" >
+    <img src="../pics-large/pic1.jpg" alt="" class="pic" data-over="pic5.jpg" >
+    <br>
+    <img src="../pics-small/pic2.jpg" alt="" class="pic" data-over="pic3.jpg" >
     <noscript>
         Моля,  разрешете използването на JS ...
     </noscript>
@@ -21,18 +23,23 @@
            console.log('Hello jQuery');
            var imgSrc='';
 
-           $('#pic')
-           .mouseover(function(evt){
 
+           $('.pic')
+           .mouseover(function(evt){
+                var pos = 0;
+                var imgPath='';
                 var imgOver = $(this).data('over');
                     imgSrc  = $(this).attr('src');
 
-                $(this).attr('src', imgOver );
+                pos = imgSrc.lastIndexOf('/');
+                imgPath = imgSrc.substr( 0, pos + 1);
+               
+                $(this).attr('src', imgPath + imgOver );
            })//on mouse over
            .mouseout(function(evt){
 
                 $(this).attr('src', imgSrc );
-                
+
            }); //on mouse out
 
        });//document ready
